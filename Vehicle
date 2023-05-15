@@ -1,0 +1,63 @@
+class Vehicle {
+
+    private int numberOfWheels;
+
+    private int averageMilesPerGallon;
+
+    public Vehicle(int numberOfWheels, int averageMilesPerGallon) {
+
+        this.numberOfWheels = numberOfWheels;
+
+        this.averageMilesPerGallon = averageMilesPerGallon;
+
+    }
+
+    @Override
+
+    public String toString() {
+
+        return "Number of wheels: " + numberOfWheels + "\nAverage miles per gallon: " + averageMilesPerGallon;
+
+    }
+
+}
+
+class Car extends Vehicle {
+
+    public Car(int averageMilesPerGallon) {
+
+        super(4, averageMilesPerGallon);
+
+    }
+
+}
+
+class MotorCycle extends Vehicle {
+
+    public MotorCycle(int averageMilesPerGallon) {
+
+        super(2, averageMilesPerGallon);
+
+    }
+
+}
+
+public class UseVehicle {
+
+    public static void main(String[] args) {
+
+        Car car = new Car(30);
+
+        MotorCycle motorCycle = new MotorCycle(50);
+
+        System.out.println("Car:");
+
+        System.out.println(car);
+
+        System.out.println("\nMotorcycle:");
+
+        System.out.println(motorCycle);
+
+    }
+
+}
